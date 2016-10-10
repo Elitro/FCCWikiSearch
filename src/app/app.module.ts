@@ -8,11 +8,13 @@ import { RandomArticleComponent } from './random-article/random-article.componen
 
 // 3rd party
 import { MaterialModule } from '@angular/material';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RandomArticleComponent
+    RandomArticleComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
