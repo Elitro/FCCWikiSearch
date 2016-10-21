@@ -1,12 +1,23 @@
-<div class="row" style="margin-top: 30px;">
-	<div class="col-xs-offset-4 col-xs-4 text-center">
+<div class="row centered" style="margin-top: 30px;">
+	<div class="col-sm-8 col-xs-12 text-center">
 		<div class="input-group">
+
 			<span class="input-group-addon" id="search">
         <i class="fa fa-search" aria-hidden="true"></i>
-      </span>
-			
+      </span>			
       <input type="text" class="form-control" placeholder="Search article..." aria-describedby="search text">
 		
     </div>
 	</div>
+</div>
+
+<div class="row" style="display: flex">
+  <div class="card col-xs-6 col-sm-4 col-md-3" *ngFor="let item of [0,1,2,3,4]">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 </div>
