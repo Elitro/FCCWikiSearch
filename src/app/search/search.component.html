@@ -1,23 +1,45 @@
 <div class="row centered" style="margin-top: 30px;">
-	<div class="col-sm-8 col-xs-12 text-center">
-		<div class="input-group">
+  <div class="col-sm-8 col-xs-12 text-center">
 
-			<span class="input-group-addon" id="search">
+    <form #form="ngForm" (ngSubmit)="submitSearch(form.value)">
+      <div class="input-group">
+
+        <span class="input-group-addon" id="search">
         <i class="fa fa-search" aria-hidden="true"></i>
-      </span>			
-      <input type="text" class="form-control" placeholder="Search article..." aria-describedby="search text">
-		
-    </div>
-	</div>
+      </span>
+        <input type="text" class="form-control" name="searchBox" ngModel placeholder="Search article..." aria-describedby="search text"
+          required>
+
+      </div>
+    </form>
+  </div>
 </div>
 
-<div class="row" style="display: flex">
-  <div class="card col-xs-6 col-sm-4 col-md-3" *ngFor="let item of [0,1,2,3,4]">
-    <img class="card-img-top" src="..." alt="Card image cap">
+<!--<div id="card-container" class="row">
+  <div class="card col-xs-6 col-sm-4 col-md-3" *ngFor="let item of cardArray">
+    <img class="card-img-top" src="{{item.Image}}" alt="Card image cap">
     <div class="card-block">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h4 class="card-title">{{item.Title}}</h4>
+      <p class="card-text">{{item.Description}}</p>
+      <a href="{{item.Link}}" class="btn btn-primary" target="_blank">Open</a>
     </div>
   </div>
+</div>-->
+<!--class="card col-xs-6 col-sm-4 col-md-3"-->
+<div style="">
+
+  <md-card class="card col-xs-6 col-sm-4 col-md-3" style="height: 50%" *ngFor="let item of cardArray">
+    <md-card-title>{{item.Title}}</md-card-title>
+
+    <img md-card-sm-image src="{{item.Image}}">
+
+    <md-card-content>
+      {{item.Description}}
+    </md-card-content>
+
+    <md-card-actions>
+      <a href="{{item.Link}}" class="btn btn-primary" target="_blank">Open</a>
+    </md-card-actions>
+  </md-card>
+
 </div>

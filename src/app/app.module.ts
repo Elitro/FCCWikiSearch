@@ -1,7 +1,8 @@
+import { SearchService } from './search/search.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RandomArticleComponent } from './random-article/random-article.component';
@@ -9,6 +10,7 @@ import { RandomArticleComponent } from './random-article/random-article.componen
 // 3rd party
 import { MaterialModule } from '@angular/material';
 import { SearchComponent } from './search/search.component';
+import { MdCard } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot()
+    JsonpModule,
+    MaterialModule.forRoot(),
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
