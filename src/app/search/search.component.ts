@@ -35,11 +35,32 @@ export class SearchComponent implements OnInit {
             }
 
             currentCard.Link = `http://en.wikipedia.org/wiki/${currentCard.Title}`;
+            currentCard.Color = Math.round(Math.random() * 4);
             this.cardArray.push(currentCard);
           }
         }
         console.table(this.cardArray);
       });
+  }
+
+  getRandomCardColor(color: number): string {
+
+    console.log(color);
+
+    switch (color) {
+      case 0:
+        return 'card-primary';
+      case 1:
+        return 'card-success';
+      case 2:
+        return 'card-info';
+      case 3:
+        return 'card-warning';
+      case 4:
+        return 'card-danger';
+      default:
+        return 'card-primary';
+    }
   }
 
 }

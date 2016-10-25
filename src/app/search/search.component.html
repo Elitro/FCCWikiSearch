@@ -15,31 +15,17 @@
   </div>
 </div>
 
-<!--<div id="card-container" class="row">
-  <div class="card col-xs-6 col-sm-4 col-md-3" *ngFor="let item of cardArray">
-    <img class="card-img-top" src="{{item.Image}}" alt="Card image cap">
+<div class="card-columns" style="margin-top: 30px">
+  <div class="card card-inverse {{getRandomCardColor(item.Color)}}" *ngFor="let item of cardArray">
+
+    <div style="display: flex; justify-content: center">
+      <img class="card-img-top" src="{{item.Image}}" alt="Card image cap" *ngIf="item.Image">
+    </div>
     <div class="card-block">
       <h4 class="card-title">{{item.Title}}</h4>
       <p class="card-text">{{item.Description}}</p>
       <a href="{{item.Link}}" class="btn btn-primary" target="_blank">Open</a>
     </div>
+
   </div>
-</div>-->
-<!--class="card col-xs-6 col-sm-4 col-md-3"-->
-<div style="">
-
-  <md-card class="card col-xs-6 col-sm-4 col-md-3" style="height: 50%" *ngFor="let item of cardArray">
-    <md-card-title>{{item.Title}}</md-card-title>
-
-    <img md-card-sm-image src="{{item.Image}}">
-
-    <md-card-content>
-      {{item.Description}}
-    </md-card-content>
-
-    <md-card-actions>
-      <a href="{{item.Link}}" class="btn btn-primary" target="_blank">Open</a>
-    </md-card-actions>
-  </md-card>
-
 </div>

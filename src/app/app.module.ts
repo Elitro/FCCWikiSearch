@@ -8,9 +8,7 @@ import { AppComponent } from './app.component';
 import { RandomArticleComponent } from './random-article/random-article.component';
 
 // 3rd party
-import { MaterialModule } from '@angular/material';
 import { SearchComponent } from './search/search.component';
-import { MdCard } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,8 +20,7 @@ import { MdCard } from '@angular/material';
     BrowserModule,
     FormsModule,
     HttpModule,
-    JsonpModule,
-    MaterialModule.forRoot(),
+    JsonpModule
   ],
   providers: [SearchService],
   bootstrap: [AppComponent]
